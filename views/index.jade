@@ -1,0 +1,42 @@
+head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src ="/socket.io/socket.io.js")
+    script(src="/javascripts/socket.js")
+    script(src="/javascripts/zepto.js")    
+    script(src="/javascripts/paper-copy.js")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+    script(src="/javascripts/chatPortal.js")
+    //- script(src="/javascripts/login.js")
+    //- script(src="/javascripts/r.js")
+    //- script(src="/__/firebase/4.10.1/firebase-auth.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js")
+  .master
+    #contentwrap
+      .username
+        p Enter your username: 
+        form#usernameform
+          input#username(placeholder='Username')
+          br
+          button#submit Submit
+          #name
+      #chatwrap
+        .overflow
+          ul#messages
+          #typing
+        form#chatting(action='')
+          input#messagebox
+          div
+            img#warning(src='data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxjaXJjbGUgc3R5bGU9ImZpbGw6I0VGQ0U0QTsiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgeDE9IjI1IiB5MT0iMTAiIHgyPSIyNSIgeTI9IjMyIi8+CjxsaW5lIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiB4MT0iMjUiIHkxPSIzNyIgeDI9IjI1IiB5Mj0iMzkiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==')
+            p.typewarning Please type a message first!
+          button#send Send
+          button#clear Clear Chat
+    #logo
+      img(src="/images/project.png")
+    #partition2
+      h3 Connected Users:
+      br
+      p (Click on username to send the drawing request)
+      #allusers
+  
